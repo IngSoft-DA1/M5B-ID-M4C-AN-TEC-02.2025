@@ -2,5 +2,5 @@
 
 Docentes:
  
- 1. marcos buydid - mb162336@fi365.ort.edu.uy
- 2. tomás bañales - tb239825@fi365.ort.edu.uy
+ 1. Marcos Buydid - mb162336@fi365.ort.edu.uy
+ 2. Tomás Bañales - tb239825@fi365.ort.edu.uy
