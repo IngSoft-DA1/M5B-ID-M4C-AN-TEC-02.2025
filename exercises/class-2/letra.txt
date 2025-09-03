@@ -1,0 +1,12 @@
+Ejercicio
+
+Crear una biblioteca de clases (Class Library) en .NET Core con una clase Persona que tenga los atributos:
+- Nombre (string)
+- FechaNacimiento (DateTime)
+- Un método que calcule la edad de la persona.
+- Un método que determine el día de la semana en que nació.
+
+Crear un proyecto de consola (Console App) en .NET Core que:
+- Haga referencia a la biblioteca de clases.
+- Permita ingresar los datos de una persona.
+- Imprima en consola el día de la semana en que nació y su edad.
