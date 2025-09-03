@@ -1,0 +1,6 @@
+Crear una aplicación de consola en visual studio de nombre DA1 utilizando C# y .NET Core 8.
+Crear un proyecto de libreria de clases de nombre Dominio y agregar una clase Vehiculo al proyecto. La clase deberá tener 
+dos properties cantidadPuertas (int) y colorChasis (string) además de un método Encender que no tendrá comportamiento.
+Dentro del mismo proyecto agregar dos clases, Auto y Camioneta (que son Vehiculo), definirles el método Encender que deberá 
+imprimir en consola: "Encendiendo auto/camioneta con cantidad de puertas x y color de chasis y".
+En el proyecto de consola crear una lista de Vehículos, inicializarlos y encenderlos.
