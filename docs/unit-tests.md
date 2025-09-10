@@ -138,7 +138,7 @@ En esta fase se ejecuta el código que se está probando, utilizando los datos o
 En esta fase se verifica que el resultado de la acción (act) sea el esperado. Aquí es donde se validan las expectativas, como comparar el valor obtenido con el valor esperado.
 
 ### Ejemplo
-- El siguiente ejemplo valida cuando la cantidad de pruebas del vehiculo es correcta
+- El siguiente test valida que la cantidad de puertas del vehiculo es correcta
 
 ```cs
 [TestMethod]
@@ -153,7 +153,7 @@ En esta fase se verifica que el resultado de la acción (act) sea el esperado. A
     }
 ```
 
-- En este ejemplo si la cantidad de puertas es incorrecta, se le dice al framework que para esta prueba se espera que se reciba una excepcion, en este caso del tipo ArgumentException.
+- En este ejemplo si la cantidad de puertas es incorrecta, se le dice al framework que para esta prueba se espera que se reciba una excepción, en este caso del tipo ArgumentException.
 
 ```cs
 [TestMethod]
@@ -169,7 +169,7 @@ En esta fase se verifica que el resultado de la acción (act) sea el esperado. A
 ### Cobertura de las pruebas
 #### Propósito de la cobertura
 - La cobertura de código mide qué porcentaje del código productivo fue ejecutado durante las pruebas.
-- El objetivo es saber si la lógica de negocio (lo que hace el sistema) está siendo probado adecuadamente.
+- El objetivo es saber si lo que hace el sistema está siendo probado adecuadamente.
 
 - Tomando de ejemplo esta estructura dentro de la solución *DA12025* y asumiendo que se quiere verificar si la cobertura del proyecto Domain esta por encima del 90%:
 
