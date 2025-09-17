@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{746D552E-1B3E-4CAE-90FB-0C710CF66144}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{FDB408A9-735C-405D-86FF-940BC40D9EE2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{746D552E-1B3E-4CAE-90FB-0C710CF66144}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{746D552E-1B3E-4CAE-90FB-0C710CF66144}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{746D552E-1B3E-4CAE-90FB-0C710CF66144}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FDB408A9-735C-405D-86FF-940BC40D9EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FDB408A9-735C-405D-86FF-940BC40D9EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FDB408A9-735C-405D-86FF-940BC40D9EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FDB408A9-735C-405D-86FF-940BC40D9EE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
