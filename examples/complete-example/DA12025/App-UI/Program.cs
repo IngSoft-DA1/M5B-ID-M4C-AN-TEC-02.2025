@@ -1,10 +1,15 @@
-using BlazorApp1.Components;
+using App_UI.Components;
+using Services;
+using DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddSingleton<InMemoryDatabase>();
+builder.Services.AddScoped<MovieService>();
 
 var app = builder.Build();
 

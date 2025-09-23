@@ -1,0 +1,39 @@
+﻿@page "/delete-movie"
+@using Services
+
+@inject MovieService MovieService
+@inject NavigationManager NavigationManager
+
+<h3>Delete Movie</h3>
+
+
+<EditForm Model="@movieTitle" OnValidSubmit="OnSubmit">
+    <div class="form-group">
+        <label for="title">Títle</label>
+        <input type="text" class="form-control" id="title" @bind="movieTitle"/>
+        <ValidationMessage For="@(() => movieTitle)"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="button" class="btn btn-secondary" @onclick="OnCancel">Cancel</button>
+</EditForm>
+
+@code {
+    private string movieTitle;
+
+    protected override void OnInitialized()
+    {
+        movieTitle = "";
+    }
+
+    private void OnSubmit()
+    {
+        MovieService.RemoveMovie(movieTitle);
+        NavigationManager.NavigateTo("/movies");
+    }
+
+    private void OnCancel()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+
+}

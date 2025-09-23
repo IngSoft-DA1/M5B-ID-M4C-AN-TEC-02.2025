@@ -15,16 +15,26 @@ namespace Services
 
         public void AddMovie(Movie movie)
         {
-            if (!ValidateUniqueTitle(movie.Title))
+            if (ValidateUniqueTitle(movie.Title))
             {
-                throw new ArgumentException("There already exists an entry under this title");
+                _inMemoryDatabase.AddMovie(movie);
             }
-            _inMemoryDatabase.AddMovie(movie);
+
+        }
+
+        public void DeleteMovie(string title)
+        {
+            _inMemoryDatabase.DeleteMovie(title);
         }
 
         public List<Movie> GetMovies()
         {
             return _inMemoryDatabase.GetMovies();
+        }
+
+        public void UpdateMovie(Movie movieToUpdate)
+        {
+            _inMemoryDatabase.UpdateMovie(movieToUpdate);
         }
 
         public Movie GetMovie(string title)
@@ -37,27 +47,17 @@ namespace Services
             return movie;
         }
 
-        public void RemoveMovie(string title)
-        {
-            if (ValidateUniqueTitle(title))
-            {
-                throw new ArgumentException("There does not exist an entry under this title");
-            }
-            _inMemoryDatabase.RemoveMovie(title);
-        }
-
-        public void UpdateMovie(Movie movie)
-        {
-            if (!ValidateUniqueTitle(movie.Title))
-            {
-                throw new ArgumentException("There does not exist an entry under this title");
-            }
-            _inMemoryDatabase.UpdateMovie(movie);
-        }
-
         private bool ValidateUniqueTitle(String title)
         {
-            return (_inMemoryDatabase.GetMovie(title)) == null;
+            try
+            {
+                GetMovie(title);
+            }
+            catch (ArgumentException)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

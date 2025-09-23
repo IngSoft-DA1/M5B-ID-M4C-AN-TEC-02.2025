@@ -6,10 +6,8 @@ namespace Services.Interfaces
     {
         List<Movie> GetMovies();
         void AddMovie(Movie movie);
-        Movie GetMovie(string title);
-        
-        void RemoveMovie(string title);
-        
+        void DeleteMovie(string title);
         void UpdateMovie(Movie movie);
+        Movie GetMovie(string title);
     }
 }
