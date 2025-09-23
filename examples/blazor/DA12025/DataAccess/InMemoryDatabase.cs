@@ -35,7 +35,7 @@ namespace DataAccess
 
         public void RemoveMovie(Movie movie)
         {
-            _movies.Remove(movie);
+            _movies.Remove(_movies.First(c => c.Title.ToLower().Equals(title.ToLower())));
         }
 
         public void UpdateMovie(Movie movieToUpdate)
