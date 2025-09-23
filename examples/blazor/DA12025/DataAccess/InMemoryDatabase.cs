@@ -27,33 +27,22 @@ namespace DataAccess
             _movies.Add(movie);
         }
 
-        public Movie GetMovie(string title)
+        public Movie? GetMovie(string title)
         {
-            foreach (var movieInList in _movies)
-            {
-                if (movieInList.Title.Equals(title))
-                {
-                    return movieInList;
-                }
-            }
-            return null;
+            Movie? movie = _movies.FirstOrDefault(movie => movie.Title == title);
+            return movie;
         }
-        
-        public void RemoveMovie(string title)
+
+        public void RemoveMovie(Movie movie)
         {
             _movies.Remove(_movies.First(c => c.Title.ToLower().Equals(title.ToLower())));
         }
 
-        public void UpdateMovie(Movie movie)
+        public void UpdateMovie(Movie movieToUpdate)
         {
-            foreach (var movieInList in _movies)
-            {
-                movieInList.Title = movie.Title;
-                movieInList.ReleaseDate = movie.ReleaseDate;
-                movieInList.Director = movie.Director;
-            }
+            Movie? movie = _movies.Find(m => m.Title == movieToUpdate.Title);
+            var movieToUpdateIndex = _movies.IndexOf(movie);
+            _movies[movieToUpdateIndex] = movieToUpdate;
         }
-
-        
     }
 }
