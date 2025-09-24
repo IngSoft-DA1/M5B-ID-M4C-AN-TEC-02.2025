@@ -12,6 +12,7 @@
 2. [.NET Architecture](docs/.net-architecture.md)
 3. [C# & .NET Core](docs/.net-core.md)
 4. [Unit Tests](docs/unit-tests.md)
+5. [Blazor](docs/blazor.md)
 
 ## Evaluaciones:
 - **Ganancia de curso con 70 puntos** 
